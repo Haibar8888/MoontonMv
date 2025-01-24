@@ -35,13 +35,14 @@ export default function Login()
                             <Input type="password" name="password" placeholder="Password"/>
                         </div>
                     </div>
-                        <div className="grid space-y-[14px] mt-[30px]">
-                            <Button type="button">
-                                <span className="text-base font-semibold">
-                                    Start Watching
-                                </span>
-                            </Button>
-
+                            <div className="grid space-y-[14px] mt-[30px]">
+                            <Link href={route('prototype.dashboard') }>
+                                <Button type="button">
+                                    <span className="text-base font-semibold">
+                                        Start Watching
+                                    </span>
+                                </Button>
+                                </Link>
 
                             <Link href={route('prototype.register')}>
                                 <Button type="button" variant='light-outline'>
