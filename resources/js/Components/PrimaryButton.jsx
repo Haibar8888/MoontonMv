@@ -6,11 +6,13 @@ export default function PrimaryButton({
     children,
     variant = 'primary',
     procesing,
+    type="button",
     ...props
 }) {
     return (
         <button
             {...props}
+            type={type}
             className={
                 `rounded-2xl py-[13px] text-center w-full ${procesing && 'opacity-30'} btn-${variant} ${className}`
             }

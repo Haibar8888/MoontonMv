@@ -17,3 +17,7 @@
 .btn-white-outline {
 	@apply text-black border border-white;
 }
+
+.btn-black-outline {
+	@apply outline outline-1 outline-black;
+}

@@ -2,6 +2,7 @@ import React from 'react'
 import { useState, useRef } from 'react'
 import { Link } from '@inertiajs/react';
 
+
 export default function Topbar() {
     const [dropdown, setDropdown] = useState(false)
     const dropDownTarget = useRef();
@@ -19,7 +20,7 @@ export default function Topbar() {
           <div className="flex justify-between items-center cursor-pointer">
                         <input
                             type="text"
-                            className="top-search"
+                            className="top-search outline outline-1 outline-black"
                             placeholder="Search movie, cast, genre"
                             // Corrected inline style
                         />
@@ -33,7 +34,7 @@ export default function Topbar() {
                                 {/* <a href="" className="outline outline-2 outline-gray-2 p-[5px] rounded-full w-[60px] dropdown-button" data-target="#dropdown-button">
                                     <img src="/images/avatar.png" className="rounded-full object-cover w-full" alt="User  Avatar" />
                                 </a> */}
-                      <div className="bg-white rounded-2xl text-black font-medium flex flex-col gap-1 absolute z-[999] right-0 top-[80px] min-w-[180px] hidden overflow-hidden" id="dropdown-target" ref={dropDownTarget}>
+                                <div className="bg-white rounded-2xl text-black font-medium flex flex-col gap-1 absolute z-[999] right-0 top-[80px] min-w-[180px] hidden overflow-hidden outline outline-1 outline-black" id="dropdown-target" ref={dropDownTarget}>
                                     <Link className='transition-all hover:bg-sky-100 p-4' href={route('prototype.dashboard') }>Dashboard</Link>
                                     {/* <a href="#!" className="transition-all hover:bg-sky-100 p-4">Dashboard</a> */}
                                     <a href="#!" className="transition-all hover:bg-sky-100 p-4">Settings</a>
