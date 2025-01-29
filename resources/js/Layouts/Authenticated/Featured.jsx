@@ -1,6 +1,7 @@
 import React from 'react'
-import { Head } from '@inertiajs/react';
+import { Head,Link } from '@inertiajs/react';
 import PropTypes from 'prop-types';
+// import { Link } from '@inertiajs/inertia-react';
 
 Featured.PropTypes = {
     slug: PropTypes.string.isRequired,
@@ -42,7 +43,7 @@ export default function Featured ({slug,name,category,thumbnail,rating = 0}) {
                                     <img src="/icons/ic_play.svg" width="50" alt=""/>
                             </div>
                             </div>
-                            <a href={slug} className="inset-0 absolute z-50"></a>
+                            <Link href={route('prototype.movie.show',slug)} className="inset-0 absolute z-50"></Link>
                         </div>
                 </div>
           <script jsx={true}>
